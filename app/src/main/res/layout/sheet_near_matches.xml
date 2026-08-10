@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Typo/near-duplicate guard. Rows are inflated per candidate in code. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/space_md"
+    android:paddingBottom="@dimen/space_md">
+
+    <View
+        android:layout_width="36dp"
+        android:layout_height="4dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="@dimen/space_md"
+        android:background="@color/outline" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="@dimen/screen_margin"
+        android:text="@string/scanner_near_question"
+        android:textColor="@color/ink"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/nearSubtitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_xs"
+        android:paddingHorizontal="@dimen/screen_margin"
+        android:textColor="@color/ink_muted"
+        android:textSize="13sp"
+        tools:text="No exact match for M2314-B. These look close:" />
+
+    <LinearLayout
+        android:id="@+id/nearList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_sm"
+        android:divider="@drawable/divider_h"
+        android:orientation="vertical"
+        android:showDividers="middle" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/space_sm"
+        android:background="@color/outline" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/nearAddNew"
+        style="@style/Widget.Material3.Button.OutlinedButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/screen_margin"
+        android:layout_marginTop="@dimen/space_md"
+        android:minHeight="@dimen/touch_target_min"
+        android:text="@string/scanner_near_add_new"
+        app:icon="@drawable/ic_add"
+        app:iconGravity="textStart" />
+</LinearLayout>

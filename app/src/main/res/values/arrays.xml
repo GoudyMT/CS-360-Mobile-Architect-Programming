@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Sample approved + connected stations for the UI dropdown; replaced by a stations database later. -->
+    <string-array name="approved_stations">
+        <item>NAS Whidbey Island</item>
+    </string-array>
+
+    <!-- Systems a part can belong to; database-driven later. -->
+    <string-array name="systems">
+        <item>PAR</item>
+        <item>DASR</item>
+        <item>TACAN</item>
+    </string-array>
+</resources>

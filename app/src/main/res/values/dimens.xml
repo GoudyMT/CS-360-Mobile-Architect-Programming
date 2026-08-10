@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Minimum interactive touch target - Material accessibility floor for fast flightline use. -->
+    <dimen name="touch_target_min">48dp</dimen>
+
+    <!-- 8dp spacing scale - use these instead of ad hoc margins so spacing stays consistent across screens. -->
+    <dimen name="space_xs">4dp</dimen>
+    <dimen name="space_sm">8dp</dimen>
+    <dimen name="space_md">16dp</dimen>
+    <dimen name="space_lg">24dp</dimen>
+    <dimen name="space_xl">32dp</dimen>
+
+    <!-- Default screen edge padding. -->
+    <dimen name="screen_margin">16dp</dimen>
+</resources>

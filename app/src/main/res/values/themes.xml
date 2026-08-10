@@ -1,0 +1,27 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.InventoryApplication" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Flightline palette mapped onto Material's color roles. -->
+        <item name="android:windowBackground">@color/background</item>
+        <item name="colorPrimary">@color/navy</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorPrimaryContainer">@color/navy_container</item>
+        <item name="colorOnPrimaryContainer">@color/on_navy_container</item>
+        <item name="colorSecondary">@color/amber</item>
+        <item name="colorOnSecondary">@color/ink</item>
+        <item name="colorSecondaryContainer">@color/amber_container</item>
+        <item name="colorOnSecondaryContainer">@color/on_amber_container</item>
+        <item name="android:colorBackground">@color/background</item>
+        <item name="colorSurface">@color/surface</item>
+        <item name="colorOnSurface">@color/ink</item>
+        <item name="colorSurfaceVariant">@color/surface_variant</item>
+        <item name="colorOnSurfaceVariant">@color/ink_muted</item>
+        <item name="colorOutline">@color/outline</item>
+        <item name="colorError">@color/stock_out</item>
+        <item name="colorOnError">@color/white</item>
+        <item name="colorErrorContainer">@color/stock_out_container</item>
+        <item name="colorOnErrorContainer">@color/stock_out_on</item>
+    </style>
+
+    <style name="Theme.InventoryApplication" parent="Base.Theme.InventoryApplication" />
+</resources>

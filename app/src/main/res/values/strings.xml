@@ -1,0 +1,244 @@
+<resources>
+    <string name="app_name">Ready-Spares Inventory</string>
+
+    <!-- Login screen -->
+    <string name="login_tagline">Flightline spare-parts tracking</string>
+    <string name="login_username_hint">Username</string>
+    <string name="login_password_hint">Password</string>
+    <string name="login_button">Log in</string>
+    <string name="login_request_account">Request account</string>
+    <string name="login_logo_desc">Ready-Spares Inventory logo</string>
+
+    <!-- Request Account screen -->
+    <string name="request_account_title">Request account</string>
+    <string name="request_account_helper">Your local supply personnel approves access and emails setup steps.</string>
+    <string name="request_account_first_hint">First name</string>
+    <string name="request_account_last_hint">Last name</string>
+    <string name="request_account_rate_hint">Rate / Rank</string>
+    <string name="request_account_email_hint">Work email</string>
+    <string name="request_account_base_hint">Base / Station</string>
+    <string name="request_account_submit">Submit request</string>
+    <string name="request_account_back_desc">Back to sign in</string>
+    <string name="request_account_incomplete">Fill in every field</string>
+    <string name="request_account_submitted">Access request submitted for approval</string>
+
+    <!-- Request Account field examples (grayed placeholder text) -->
+    <string name="request_account_first_example">Jordan</string>
+    <string name="request_account_last_example">Rivera</string>
+    <string name="request_account_rate_example">AM2 (E-5)</string>
+    <string name="request_account_email_example">jordan.l.rivera.mil@us.navy.mil</string>
+
+    <!-- Main Inventory screen -->
+    <string name="inventory_title">Ready Spares</string>
+    <string name="inventory_subtitle">Inventory Overview</string>
+    <string name="menu_desc">Open menu</string>
+    <string name="nav_close">Close menu</string>
+    <string name="status_in_stock">In stock</string>
+    <string name="status_low">Low</string>
+    <string name="status_out">Out</string>
+
+    <!-- Main Inventory filters -->
+    <string name="inventory_search_hint">Search parts, SKU, or bay</string>
+    <string name="filter_all">All</string>
+    <string name="filter_in">In</string>
+    <string name="filter_low">Low</string>
+    <string name="filter_out">Out</string>
+    <string name="parts_count">Parts (%1$d)</string>
+
+    <!-- Sort choices -->
+    <string name="sort_label">Sort: %1$s</string>
+    <string name="sort_by_name">Name</string>
+    <string name="sort_by_system">System</string>
+    <string name="sort_by_quantity">Quantity</string>
+    <string name="sort_by_status">Status</string>
+    <string name="fab_add_desc">Scan to add a part</string>
+
+    <!-- Navigation drawer -->
+    <string name="nav_section_inventory">Inventory</string>
+    <string name="nav_section_oversight">Oversight</string>
+    <string name="nav_section_general">General</string>
+    <string name="nav_inventory">Inventory</string>
+    <string name="nav_receive">Receive / Add</string>
+    <string name="nav_low_out">Low &amp; out</string>
+    <string name="nav_audit">Audit history</string>
+    <string name="nav_access_requests">Access requests</string>
+    <string name="admin_pending_title">Pending access requests</string>
+    <string name="admin_empty">No pending requests right now.</string>
+    <string name="admin_approve_title">Role for %1$s %2$s</string>
+    <string name="admin_approve">Approve</string>
+    <string name="admin_deny">Deny</string>
+    <string name="admin_request_meta">%1$s  -  %2$s</string>
+    <string name="admin_provisioned_title">Account created</string>
+    <string name="admin_provisioned_msg">Username: %1$s\nTemporary password: %2$s\n\nEmailed to %3$s</string>
+    <string name="admin_denied_toast">Request denied</string>
+    <string name="access_denied">You don\'t have access to that.</string>
+    <string name="admin_accounts_title">Accounts</string>
+    <string name="admin_account_you">%1$s %2$s (you)</string>
+    <string name="admin_status_active">Active</string>
+    <string name="admin_status_disabled">Disabled</string>
+    <string name="admin_manage_title">Manage %1$s %2$s</string>
+    <string name="admin_change_role">Change role</string>
+    <string name="admin_reset_password">Reset password</string>
+    <string name="admin_disable">Disable account</string>
+    <string name="admin_enable">Enable account</string>
+    <string name="admin_apply">Apply</string>
+    <string name="admin_role_changed_toast">Role updated</string>
+    <string name="admin_reset_confirm_title">Reset password?</string>
+    <string name="admin_reset_confirm_msg">%1$s %2$s gets the temporary password and must set a new one at next login.</string>
+    <string name="admin_reset_done_title">Password reset</string>
+    <string name="admin_reset_done_msg">Temporary password: %1$s\n\nEmailed to %2$s</string>
+    <string name="admin_disabled_toast">Account disabled</string>
+    <string name="admin_enabled_toast">Account enabled</string>
+    <string name="admin_guard_self">You can\'t change your own account here.</string>
+    <string name="admin_guard_last_leader">This is the last active leadership account.</string>
+    <string name="admin_back_desc">Back</string>
+    <string name="nav_notifications">Notifications &amp; alerts</string>
+    <string name="nav_settings">Settings</string>
+    <string name="nav_help">Help / About</string>
+    <string name="nav_sign_out">Sign out</string>
+    <string name="nav_stub_toast">Coming soon</string>
+
+    <!-- Navigation drawer header (filled from the signed-in account) -->
+    <string name="nav_header_name_fmt">%1$s %2$s</string>
+    <string name="nav_header_meta_fmt">%1$s - %2$s</string>
+    <string name="nav_role_technician">TECHNICIAN</string>
+    <string name="nav_role_supply">SUPPLY / SME</string>
+    <string name="nav_role_leadership">LEADERSHIP</string>
+
+    <!-- Item Details screen -->
+    <string name="item_detail_title">Item details</string>
+    <string name="item_detail_back_desc">Back to inventory</string>
+    <string name="detail_part_number">Part # / SKU</string>
+    <string name="detail_location">Location</string>
+    <string name="detail_type">Type</string>
+    <string name="detail_system">System</string>
+    <string name="type_allowance">Allowance</string>
+    <string name="type_consumable">Consumable</string>
+    <string name="detail_allowance_ctx">%1$d of %2$d authorized on hand</string>
+    <string name="detail_consumable_ctx">Reorder at %1$d</string>
+    <string name="system_par">PAR - Precision Approach Radar</string>
+    <string name="system_dasr">DASR - Digital Airport Surveillance Radar</string>
+    <string name="system_tacan">TACAN - Tactical Air Navigation</string>
+    <string name="detail_check_out">Check out</string>
+    <string name="detail_report">Report discrepancy</string>
+    <string name="detail_delete">Delete</string>
+    <string name="detail_delete_role">Supply / SME only</string>
+    <string name="detail_delete_confirm_title">Delete part?</string>
+    <string name="detail_delete_confirm_msg">Remove %1$s from the inventory?</string>
+    <string name="detail_deleted_toast">Part deleted</string>
+    <string name="confirm_cancel">Cancel</string>
+    <string name="confirm_confirm">Confirm</string>
+    <string name="confirm_checkout_toast">Part checked out</string>
+    <string name="checkout_job_title">Job number</string>
+    <string name="checkout_job_hint">Job / work order (optional)</string>
+    <string name="checkout_verify_hint">Scan the part to confirm - or enter its number</string>
+    <string name="checkout_verified">Part confirmed</string>
+    <string name="checkout_wrong_part">Wrong part - expected %1$s, got %2$s</string>
+    <string name="checkout_manual_title">Confirm part number</string>
+    <string name="checkout_manual_hint">Part number on the item</string>
+    <string name="checkout_enter_number">Enter part #</string>
+    <string name="checkout_stock_changed">Stock changed - reloaded. Please try again.</string>
+
+    <!-- Report discrepancy sheet -->
+    <string name="report_title">Report a discrepancy</string>
+    <string name="report_part">%1$s - SKU %2$s</string>
+    <string name="report_helper">We\'ll route this to the right people.</string>
+    <string name="report_reason_count">Count doesn\'t match - request inventory update</string>
+    <string name="report_reason_out">Out too long - request order from supply/leadership</string>
+    <string name="report_note_hint">Add a note (optional)</string>
+    <string name="report_send">Send report</string>
+    <string name="report_sent_toast">Report sent to supply</string>
+
+    <!-- Scanner (Receive / Add) screen -->
+    <string name="scanner_title">Receive / Add</string>
+    <string name="scanner_torch_desc">Toggle flashlight</string>
+    <string name="scanner_enter_manual">Enter part number manually</string>
+    <string name="scanner_scanned">Scanned</string>
+    <string name="scanner_meta">SKU %1$s   -   %2$s   -   %3$s</string>
+    <string name="scanner_qty_label">Quantity to receive</string>
+    <string name="scanner_decrease">Decrease quantity</string>
+    <string name="scanner_increase">Increase quantity</string>
+    <string name="scanner_add_inventory">Add to inventory</string>
+    <string name="scanner_not_this">Not this part</string>
+    <string name="scanner_received_toast">Received %1$d x %2$s</string>
+    <string name="scanner_manual_title">Enter part number</string>
+    <string name="scanner_manual_hint">Part number / SKU</string>
+    <string name="scanner_lookup">Look up</string>
+    <string name="scanner_not_found_title">Not in inventory</string>
+    <string name="scanner_not_found_msg">%1$s isn\'t in the system yet. Add it as a new part?</string>
+    <string name="scanner_add_new_part">Add new part</string>
+    <string name="scanner_near_question">Is this the part you\'re adding?</string>
+    <string name="scanner_near_subtitle">No exact match for %1$s. These look close:</string>
+    <string name="scanner_near_meta">SKU %1$s   -   %2$s</string>
+    <string name="scanner_near_add_new">None of these - add as new</string>
+    <string name="scanner_cam_needed">Turn on the camera to scan a barcode</string>
+    <string name="scanner_cam_denied">Camera is off. Enable it in Settings to scan, or enter the part number.</string>
+    <string name="scanner_cam_enable">Enable camera</string>
+
+    <!-- New part form -->
+    <string name="new_part_title">New part</string>
+    <string name="new_part_back_desc">Back to scanning</string>
+    <string name="new_part_sku_hint">Part number / SKU</string>
+    <string name="new_part_name_hint">Part name</string>
+    <string name="new_part_system_hint">System</string>
+    <string name="new_part_location_hint">Location / bay</string>
+    <string name="new_part_type_label">Type</string>
+    <string name="new_part_type_allowance">Allowance</string>
+    <string name="new_part_type_consumable">Consumable</string>
+    <string name="new_part_limit_allowance">Authorized on-hand</string>
+    <string name="new_part_limit_consumable">Reorder-at level</string>
+    <string name="new_part_qty_hint">Starting quantity on hand</string>
+    <string name="new_part_save">Save part</string>
+    <string name="new_part_saved_toast">%1$s saved</string>
+    <string name="new_part_incomplete">Fill in every field</string>
+
+    <!-- Notifications & alerts (SMS permission) screen -->
+    <string name="notif_title">Notifications &amp; alerts</string>
+    <string name="notif_back_desc">Back</string>
+    <string name="notif_rationale_title">Low-stock &amp; discrepancy alerts</string>
+    <string name="notif_rationale_body">When a part hits zero or a discrepancy is reported, the app can text supply and leadership so it gets reordered fast.</string>
+    <string name="notif_status_off">SMS alerts: Off</string>
+    <string name="notif_status_on">SMS alerts are on</string>
+    <string name="notif_enable">Enable SMS alerts</string>
+    <string name="notif_optional">Optional. The app works fully without them.</string>
+    <string name="notif_group">Alert me about</string>
+    <string name="notif_alert_lowstock">Low stock (part reaches 0)</string>
+    <string name="notif_alert_discrepancy">Discrepancy reports</string>
+    <string name="notif_test">Send a test alert</string>
+    <string name="notif_denied_body">You denied SMS access. The app still works - you just won\'t get texts. Turn it on in Settings anytime.</string>
+    <string name="notif_open_settings">Open settings</string>
+
+    <!-- Low-stock SMS alert -->
+    <string name="alert_low_stock_sms">LOW STOCK - %1$s (%2$s) is down to %3$d on hand. Reorder needed.</string>
+    <string name="alert_test_sms">Flightline inventory: low-stock SMS alerts are active.</string>
+    <string name="alert_sent_toast">Low-stock alert sent to %1$s</string>
+    <string name="alert_low_stock_summary">%1$d part(s) low on stock: %2$s. Reorder needed.</string>
+    <string name="notif_check_stock">Run low-stock check now</string>
+    <string name="notif_check_running">Running low-stock check...</string>
+    <string name="notif_channel_low_stock">Low-stock alerts</string>
+    <string name="notif_low_stock_title">Low stock report</string>
+    <string name="notif_low_stock_text">%1$d item(s) found - tap to review</string>
+
+    <!-- Settings (permissions hub) -->
+    <string name="settings_permissions">Permissions</string>
+    <string name="settings_camera">Camera</string>
+    <string name="settings_camera_sub">Scan barcodes to receive and check out parts</string>
+    <string name="settings_sms">SMS alerts</string>
+    <string name="settings_sms_sub">Text supply on low stock and discrepancies</string>
+    <string name="settings_on">On</string>
+    <string name="settings_off">Off</string>
+    <string name="detail_camera_needed">Camera access is needed to confirm the part. Enable it in Settings.</string>
+
+    <!-- Sign in + change password -->
+    <string name="login_empty">Enter your username and password</string>
+    <string name="login_invalid">Invalid username or password</string>
+    <string name="login_disabled">This account is disabled. Contact your supply leadership.</string>
+    <string name="change_password_title">Set a new password</string>
+    <string name="change_password_helper">Your temporary password must be changed before you continue.</string>
+    <string name="change_password_new_hint">New password</string>
+    <string name="change_password_confirm_hint">Confirm new password</string>
+    <string name="change_password_save">Save and continue</string>
+    <string name="change_password_too_short">Use at least 6 characters</string>
+    <string name="change_password_mismatch">Passwords don\'t match</string>
+    <string name="change_password_done">Password updated</string>
+</resources>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Discrepancy report sheet: pre-filled reason options for the item. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="@dimen/screen_margin">
+
+    <View
+        android:layout_width="36dp"
+        android:layout_height="4dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="@dimen/space_md"
+        android:background="@color/outline" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/report_title"
+        android:textColor="@color/ink"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/reportPart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_xs"
+        android:textColor="@color/ink_muted"
+        android:textSize="13sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_sm"
+        android:text="@string/report_helper"
+        android:textColor="@color/ink_muted"
+        android:textSize="12sp" />
+
+    <RadioGroup
+        android:id="@+id/reportReasons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_sm">
+
+        <RadioButton
+            android:id="@+id/reasonCount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:minHeight="@dimen/touch_target_min"
+            android:text="@string/report_reason_count"
+            android:textColor="@color/ink"
+            android:textSize="14sp" />
+
+        <RadioButton
+            android:id="@+id/reasonOut"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/touch_target_min"
+            android:text="@string/report_reason_out"
+            android:textColor="@color/ink"
+            android:textSize="14sp" />
+    </RadioGroup>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/reportNoteLayout"
+        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_sm"
+        android:hint="@string/report_note_hint">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/reportNote"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="top"
+            android:inputType="textCapSentences|textMultiLine"
+            android:maxLines="3"
+            android:minHeight="@dimen/touch_target_min" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/reportSend"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_md"
+        android:minHeight="@dimen/touch_target_min"
+        android:text="@string/report_send"
+        android:textSize="16sp"
+        app:icon="@drawable/ic_flag"
+        app:iconGravity="textStart" />
+</LinearLayout>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Nav drawer: grouped sections. Rows appear only for the
+     roles that can use them. -->
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="@string/nav_section_inventory">
+        <menu>
+            <item
+                android:id="@+id/nav_inventory"
+                android:icon="@drawable/ic_inventory"
+                android:title="@string/nav_inventory" />
+            <item
+                android:id="@+id/nav_receive"
+                android:icon="@drawable/ic_add"
+                android:title="@string/nav_receive" />
+            <item
+                android:id="@+id/nav_low_out"
+                android:icon="@drawable/ic_warning"
+                android:title="@string/nav_low_out" />
+        </menu>
+    </item>
+
+    <item android:id="@+id/nav_section_oversight" android:title="@string/nav_section_oversight">
+        <menu>
+            <item
+                android:id="@+id/nav_audit"
+                android:icon="@drawable/ic_history"
+                android:title="@string/nav_audit" />
+            <item
+                android:id="@+id/nav_access_requests"
+                android:icon="@drawable/ic_person_add"
+                android:title="@string/nav_access_requests" />
+        </menu>
+    </item>
+
+    <item android:title="@string/nav_section_general">
+        <menu>
+            <item
+                android:id="@+id/nav_notifications"
+                android:icon="@drawable/ic_bell"
+                android:title="@string/nav_notifications" />
+            <item
+                android:id="@+id/nav_settings"
+                android:icon="@drawable/ic_settings"
+                android:title="@string/nav_settings" />
+            <item
+                android:id="@+id/nav_help"
+                android:icon="@drawable/ic_help"
+                android:title="@string/nav_help" />
+            <item
+                android:id="@+id/nav_sign_out"
+                android:icon="@drawable/ic_logout"
+                android:title="@string/nav_sign_out" />
+        </menu>
+    </item>
+</menu>

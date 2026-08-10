@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Icon tint: navy on the active row, muted ink otherwise (matches the toolbar/tiles scheme). -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_checked="true" android:color="@color/navy" />
+    <item android:color="@color/ink_muted" />
+</selector>

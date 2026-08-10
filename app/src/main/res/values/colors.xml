@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base -->
+    <color name="white">#FFFFFFFF</color>
+    <color name="white_70">#B3FFFFFF</color>
+
+    <!-- Brand: Flightline - naval navy + high-visibility amber -->
+    <color name="navy">#FF1B3A5B</color>
+    <color name="navy_container">#FFD7E3F2</color>
+    <color name="on_navy_container">#FF0A2338</color>
+    <color name="amber">#FFFFB300</color>
+    <color name="amber_container">#FFFFECB3</color>
+    <color name="on_amber_container">#FF4A3200</color>
+
+    <!-- Surfaces + text -->
+    <color name="background">#FFF4F6F9</color>
+    <color name="surface">#FFFFFFFF</color>
+    <color name="surface_variant">#FFEAEEF3</color>
+    <color name="ink">#FF1A1C1E</color>
+    <color name="ink_muted">#FF5B6672</color>
+    <color name="outline">#FFD9DEE5</color>
+
+    <!-- Stock status - always paired with a text label, never color alone -->
+    <color name="stock_in">#FF2E7D32</color>
+    <color name="stock_in_container">#FFE8F5E9</color>
+    <color name="stock_in_on">#FF1B5E20</color>
+    <color name="stock_low">#FFF9A825</color>
+    <color name="stock_low_container">#FFFFF8E1</color>
+    <color name="stock_low_on">#FF7A5900</color>
+    <color name="stock_out">#FFC62828</color>
+    <color name="stock_out_container">#FFFFEBEE</color>
+    <color name="stock_out_on">#FFB71C1C</color>
+</resources>

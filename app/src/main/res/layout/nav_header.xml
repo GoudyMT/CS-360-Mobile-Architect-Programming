@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Drawer header: navy identity block with an amber role chip, filled from the signed-in account. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/navy"
+    android:orientation="vertical"
+    android:paddingHorizontal="@dimen/space_md"
+    android:paddingTop="@dimen/space_md"
+    android:paddingBottom="@dimen/space_md">
+
+    <TextView
+        android:id="@+id/navHeaderInitials"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="@drawable/bg_avatar"
+        android:gravity="center"
+        android:textColor="@color/navy"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        tools:text="JR" />
+
+    <TextView
+        android:id="@+id/navHeaderName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_md"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        tools:text="Jordan Rivera" />
+
+    <TextView
+        android:id="@+id/navHeaderMeta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_xs"
+        android:textColor="@color/white_70"
+        android:textSize="13sp"
+        tools:text="AM2 (E-5) - NAS Whidbey Island" />
+
+    <TextView
+        android:id="@+id/navHeaderRole"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_sm"
+        android:background="@drawable/bg_role_chip"
+        android:paddingHorizontal="@dimen/space_sm"
+        android:paddingVertical="@dimen/space_xs"
+        android:textColor="@color/on_amber_container"
+        android:textSize="11sp"
+        android:textStyle="bold"
+        tools:text="SUPPLY / SME" />
+</LinearLayout>

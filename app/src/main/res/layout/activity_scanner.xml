@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ScannerActivity">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/navy"
+        app:navigationIcon="@drawable/ic_arrow_back"
+        app:navigationContentDescription="@string/item_detail_back_desc"
+        app:navigationIconTint="@color/white"
+        app:title="@string/scanner_title"
+        app:titleTextColor="@color/white" />
+
+    <FrameLayout
+        android:id="@+id/stateContainer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <!-- SCAN STATE -->
+        <LinearLayout
+            android:id="@+id/scanGroup"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:id="@+id/scanViewfinder"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@color/navy">
+
+                <!-- Live camera preview; decodes a barcode straight into the receive lookup. -->
+                <com.journeyapps.barcodescanner.BarcodeView
+                    android:id="@+id/barcodeView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <!-- Aim guide framing the barcode over the preview. -->
+                <View
+                    android:layout_width="220dp"
+                    android:layout_height="120dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/bg_scan_frame" />
+
+                <ImageView
+                    android:id="@+id/torchButton"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:layout_gravity="top|end"
+                    android:layout_margin="@dimen/space_sm"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:contentDescription="@string/scanner_torch_desc"
+                    android:focusable="true"
+                    android:padding="@dimen/space_sm"
+                    android:src="@drawable/ic_flash"
+                    app:tint="@color/white_70" />
+
+                <!-- Shown when the CAMERA permission is missing; covers the viewfinder. -->
+                <LinearLayout
+                    android:id="@+id/cameraOffGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/navy"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="@dimen/space_xl"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/ic_camera"
+                        app:tint="@color/white_70" />
+
+                    <TextView
+                        android:id="@+id/cameraOffText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_sm"
+                        android:gravity="center"
+                        android:lineSpacingMultiplier="1.3"
+                        android:textColor="@color/white_70"
+                        android:textSize="13sp"
+                        tools:text="Turn on the camera to scan a barcode" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/enableCameraButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_md"
+                        android:minHeight="@dimen/touch_target_min"
+                        android:text="@string/scanner_cam_enable"
+                        android:textColor="@color/ink"
+                        app:backgroundTint="@color/amber"
+                        app:icon="@drawable/ic_camera"
+                        app:iconGravity="textStart"
+                        app:iconTint="@color/ink" />
+                </LinearLayout>
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/surface"
+                android:orientation="vertical"
+                android:padding="@dimen/screen_margin">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/enterManualButton"
+                    style="@style/Widget.Material3.Button.OutlinedButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="@dimen/touch_target_min"
+                    android:text="@string/scanner_enter_manual"
+                    app:icon="@drawable/ic_search"
+                    app:iconGravity="textStart" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- RECEIVE STATE (a known part was scanned) -->
+        <LinearLayout
+            android:id="@+id/receiveGroup"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone"
+            tools:visibility="gone">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:background="@color/navy">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/ic_check"
+                        app:tint="@color/white" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_xs"
+                        android:text="@string/scanner_scanned"
+                        android:textColor="@color/white_70"
+                        android:textSize="13sp" />
+                </LinearLayout>
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@color/surface"
+                android:orientation="vertical"
+                android:padding="@dimen/screen_margin">
+
+                <TextView
+                    android:id="@+id/receiveName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/ink"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    tools:text="Magnetron" />
+
+                <TextView
+                    android:id="@+id/receiveSystemTag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_xs"
+                    android:background="@drawable/bg_system_tag"
+                    android:paddingHorizontal="7dp"
+                    android:paddingVertical="2dp"
+                    android:textColor="@color/navy"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    tools:text="PAR" />
+
+                <TextView
+                    android:id="@+id/receiveMeta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_sm"
+                    android:textColor="@color/ink_muted"
+                    android:textSize="13sp"
+                    tools:text="SKU M2314-A   -   Bay A-12   -   Allowance" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_lg"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/scanner_qty_label"
+                        android:textColor="@color/ink"
+                        android:textSize="14sp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_stepper"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageButton
+                            android:id="@+id/decreaseButton"
+                            android:layout_width="44dp"
+                            android:layout_height="44dp"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            android:contentDescription="@string/scanner_decrease"
+                            android:src="@drawable/ic_minus"
+                            app:tint="@color/navy" />
+
+                        <TextView
+                            android:id="@+id/qtyText"
+                            android:layout_width="40dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:textColor="@color/ink"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            tools:text="1" />
+
+                        <ImageButton
+                            android:id="@+id/increaseButton"
+                            android:layout_width="44dp"
+                            android:layout_height="44dp"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            android:contentDescription="@string/scanner_increase"
+                            android:src="@drawable/ic_add"
+                            app:tint="@color/navy" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/surface"
+                android:orientation="horizontal"
+                android:padding="@dimen/screen_margin">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/notThisButton"
+                    style="@style/Widget.Material3.Button.OutlinedButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/space_sm"
+                    android:layout_weight="1"
+                    android:minHeight="@dimen/touch_target_min"
+                    android:text="@string/scanner_not_this" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/addInventoryButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:minHeight="@dimen/touch_target_min"
+                    android:text="@string/scanner_add_inventory" />
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>
