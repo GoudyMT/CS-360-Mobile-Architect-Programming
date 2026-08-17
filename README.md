@@ -168,6 +168,22 @@ I built Ready-Spares as the term project for **CS-360**, a mobile application de
 
 ---
 
+## Reflection
+
+**The problem and the users.** Tracking ready-spare parts by hand is slow, and a wrong part or an empty shelf can stop flight operations. That's the problem Ready-Spares solves. It's for a Naval Air Station Ground Electronics Maintenance Division, the shop that keeps the airfield's safety of flight systems up. Three people use it. A technician checks out a part and has to know it's the right one. Supply receives stock and manages what's on hand. Leadership watches for low stock and controls the accounts.
+
+**A user-centered UI.** I built it for fast use on the flight line. Big buttons. Barcode scanning. Stock status shows as a color and a word, not color by itself, so a colorblind tech can still read it. The screens are login, the inventory grid, item details, the scanner, the new-part form, and the account admin page. Each role only sees what it can actually use. A technician doesn't get buttons that do nothing for them. It fits the way the shop already works.
+
+**How I coded it.** One slice at a time. I'd build a screen, test it, then move to the next. The layers stay apart: Activity, then ViewModel, then a repository, then the Room database. The grid uses live data, so it refreshes itself. Checkout is one transaction with an optimistic-lock check, so two people can't both grab the last part. I'll keep working this way. Small steps are easier to fix than big ones.
+
+**How I tested it.** Emulator first, then a real phone. The emulator can't feed the camera decoder, so I tested the live scan and the checkout verification on my own device. I ran the SMS permission both ways, granted and denied. The app runs fine either way. Testing also caught something I'd missed. Hiding a button by role isn't real security, so I check the role again when the screen opens.
+
+**Where I had to innovate.** Checkout gave me the most trouble. I didn't want the scan to send the user to another screen, so the buttons slide down and a camera opens in their place, with the part still shown above. The app reads the code and checks it against the part before anything else. Wrong code, the phone buzzes and stops. If the camera won't read it, you type the number and it checks the same way. Getting that to feel smooth and responsive took a while.
+
+**What I'm most proud of.** The checkout data path. A single Room transaction writes the new count and an audit record together, or neither one lands. An optimistic-lock check rejects the checkout if someone else changed that part first.
+
+---
+
 ## Author
 
 **Max Goudy** - US Navy veteran and computer science student. Built solo.
